@@ -1,7 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Josefin+Sans:wght@300&family=Raleway:wght@400;500&family=Roboto:wght@300&display=swap");
+$primary: #6300ff;
+$button-color: #baa0e5;
+$border-color: #1f0052;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", "Raleway", "Fredoka", "Josefin Sans", sans-serif;
+}
+
+html,
+body {
+  width: 100vw;
 }
 
 a {
@@ -12,3 +23,7 @@ a {
 ul {
   list-style-type: none;
 }
+
+@import "./nav";
+@import "./search";
+@import "./footer";

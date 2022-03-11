@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 8.5vh;
+  box-shadow: 0 5px 5px #a5a5a5;
+  ul {
+    display: flex;
+    margin-right: 2rem;
+    li {
+      padding: 2rem 1.75rem;
+      font: normal normal bolder normal 1.5rem "Raleway", "Roboto", sans-serif;
+      a {
+        color: $primary;
+      }
+    }
+  }
+}

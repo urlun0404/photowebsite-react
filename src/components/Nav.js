@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <nav>
       <ul>
         <li>
-          <a href="/">HOME</a>
+          <Link to="/">HOME</Link>
         </li>
         <li>
-          <a href="/about">ABOUT</a>
+          <Link to="/about">ABOUT</Link>
         </li>
       </ul>
     </nav>
