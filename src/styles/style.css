@@ -13,10 +13,4 @@ a {
 ul {
   list-style-type: none;
 }
-
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 /*# sourceMappingURL=style.css.map */
