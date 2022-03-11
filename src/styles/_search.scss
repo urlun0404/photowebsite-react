@@ -3,13 +3,20 @@
   justify-content: center;
   align-items: center;
   height: 8vh;
+  padding: 1rem 0;
+  margin: 2rem 0;
   input,
   button {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
     font-size: 1.25rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
   }
   input {
     border: 1px solid $border-color;
+    &:hover {
+      filter: brightness(0.9);
+    }
   }
   button {
     margin-left: 1rem;
@@ -18,5 +25,9 @@
     background: $button-color;
     border: 0;
     cursor: pointer;
+    &:hover {
+      color: #fff;
+      background: $button-hover-color;
+    }
   }
 }

@@ -7,11 +7,6 @@
   font-family: "Roboto", "Raleway", "Fredoka", "Josefin Sans", sans-serif;
 }
 
-html,
-body {
-  width: 100vw;
-}
-
 a {
   text-decoration: none;
   color: #000;
@@ -64,16 +59,26 @@ nav ul li a {
       -ms-flex-align: center;
           align-items: center;
   height: 8vh;
+  padding: 1rem 0;
+  margin: 2rem 0;
 }
 
 .search input,
 .search button {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   font-size: 1.25rem;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .search input {
   border: 1px solid #1f0052;
+}
+
+.search input:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
 }
 
 .search button {
@@ -85,9 +90,12 @@ nav ul li a {
   cursor: pointer;
 }
 
+.search button:hover {
+  color: #fff;
+  background: #61468a;
+}
+
 footer {
-  position: fixed;
-  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,8 +106,68 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding: 0.75rem 0;
-  font: 1.25rem bold;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  font: 1.05rem bold;
   background-color: #c4c4c4;
+}
+
+.pictures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pictures .picture {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+  margin: 0.75rem;
+  padding: 1rem;
+}
+
+.pictures .picture .imageContainer {
+  height: 40vh;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 3px 5px rgba(87, 87, 87, 0.7);
+          box-shadow: 3px 3px 5px rgba(87, 87, 87, 0.7);
+}
+
+.pictures .picture .imageContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center center;
+     object-position: center center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.pictures .picture .imageContainer img:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.pictures .picture p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.pictures .picture p a {
+  font-weight: bold;
+  color: #6300ff;
+}
+
+.pictures .picture p a:hover {
+  color: #ff0000;
 }
 /*# sourceMappingURL=style.css.map */
