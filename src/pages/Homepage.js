@@ -6,6 +6,7 @@ const Homepage = () => {
   const [input, setInput] = useState("");
   let [photos, setPhotos] = useState(null);
   let [pages, setPages] = useState(1);
+  let [currSearch, setCurrSearch] = useState("");
   const auth = "";
   const initURL = "https://api.pexels.com/v1/curated?page=1&per_page=15";
   const searchURL = `https://api.pexels.com/v1/search?query=${input}&page=1&per_page=15`;
@@ -22,15 +23,16 @@ const Homepage = () => {
     });
     let parsedData = await data.json();
     setPhotos(parsedData.photos);
+    setCurrSearch(input);
   };
 
   // fetch data from clicking Load More button
   const loadMorePictures = async () => {
     setPages(++pages);
     let url =
-      input === ""
+      currSearch === ""
         ? `https://api.pexels.com/v1/curated?page=${pages}&per_page=15`
-        : `https://api.pexels.com/v1/search?query=${input}&page=${pages}&per_page=15`;
+        : `https://api.pexels.com/v1/search?query=${currSearch}&page=${pages}&per_page=15`;
     const data = await fetch(url, {
       method: "GET",
       headers: {
@@ -39,7 +41,6 @@ const Homepage = () => {
       },
     });
     let parsedData = await data.json();
-    console.log(parsedData.photos);
     setPhotos([...photos, ...parsedData.photos]);
   };
 
