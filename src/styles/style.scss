@@ -20,6 +20,23 @@ ul {
   list-style-type: none;
 }
 
+.morePictures {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    background: $button-color;
+    font-size: 1.35rem;
+    font-weight: bolder;
+    color: #ffffff;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
 @import "./nav";
 @import "./search";
 @import "./footer";

@@ -5,12 +5,14 @@ import Picture from "../components/Picture";
 const Homepage = () => {
   const [input, setInput] = useState("");
   let [photos, setPhotos] = useState(null);
+  let [pages, setPages] = useState(1);
   const auth = "";
   const initURL = "https://api.pexels.com/v1/curated?page=1&per_page=15";
   const searchURL = `https://api.pexels.com/v1/search?query=${input}&page=1&per_page=15`;
 
   // fetch data from pexels api
   const search = async (url) => {
+    setPages(1);
     const data = await fetch(url, {
       method: "GET",
       headers: {
@@ -20,6 +22,25 @@ const Homepage = () => {
     });
     let parsedData = await data.json();
     setPhotos(parsedData.photos);
+  };
+
+  // fetch data from clicking Load More button
+  const loadMorePictures = async () => {
+    setPages(++pages);
+    let url =
+      input === ""
+        ? `https://api.pexels.com/v1/curated?page=${pages}&per_page=15`
+        : `https://api.pexels.com/v1/search?query=${input}&page=${pages}&per_page=15`;
+    const data = await fetch(url, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        Authorization: auth,
+      },
+    });
+    let parsedData = await data.json();
+    console.log(parsedData.photos);
+    setPhotos([...photos, ...parsedData.photos]);
   };
 
   // fetch data when the page loads up
@@ -35,6 +56,9 @@ const Homepage = () => {
       />
       <div className="pictures">
         {photos && photos.map((photo) => <Picture photo={photo} />)}
+      </div>
+      <div className="morePictures">
+        <button onClick={loadMorePictures}>Load More</button>
       </div>
     </div>
   );
