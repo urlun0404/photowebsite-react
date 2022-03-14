@@ -30,9 +30,7 @@ const Homepage = () => {
   return (
     <div style={{ minHeight: "100vh" }}>
       <Search
-        search={() => {
-          search(searchURL);
-        }}
+        search={() => (input !== "" ? search(searchURL) : null)}
         setInput={setInput}
       />
       <div className="pictures">
