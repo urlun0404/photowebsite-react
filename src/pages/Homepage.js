@@ -7,7 +7,7 @@ const Homepage = () => {
   let [photos, setPhotos] = useState(null);
   let [pages, setPages] = useState(1);
   let [currSearch, setCurrSearch] = useState("");
-  const auth = "";
+  const auth = process.env.REACT_APP_PEXELS_API_KEY;
   const initURL = "https://api.pexels.com/v1/curated?page=1&per_page=15";
   const searchURL = `https://api.pexels.com/v1/search?query=${input}&page=1&per_page=15`;
 
