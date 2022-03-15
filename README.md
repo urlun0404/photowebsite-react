@@ -2,7 +2,7 @@
 
 A photo collection webstie is built with React and Pexels user-authorized API that provides best photos for searching and download.
 
-<img src="https://github.com/urlun0404/photowebsite-react/blob/main/homepage.png?raw=true" alt="Photo Website Image" style="width: 250px;"/>
+<img src="https://github.com/urlun0404/photowebsite-react/blob/main/homepage.png?raw=true" alt="Photo Website Image" style="width: 500px;"/>
 
 ## Built With
 
@@ -21,12 +21,13 @@ The following features are what you can do on this website:
 
 ## Live Demo
 
+[Live Demo on Netlify](https://react-photo-website.netlify.app/)
+
 ## To Do:
 
 - Button for clearing search bar
 - Update website UI
 - Add About page
-- others when something inspires
 
 ## Author
 
