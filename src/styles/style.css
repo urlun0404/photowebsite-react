@@ -194,4 +194,85 @@ footer {
 .pictures .picture p a:hover {
   color: #ff0000;
 }
+
+header {
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+header h2 {
+  padding: 1rem 0;
+  margin: 0.75rem 0;
+  font-size: 2rem;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+main h3 {
+  font-size: 1.75rem;
+}
+
+main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main ul li {
+  margin: 2rem 0 1rem 0;
+}
+
+main ul li a {
+  display: block;
+  margin: 1rem 0;
+  color: #4302aa;
+  text-decoration: underline;
+}
+
+main ul li a:hover {
+  font-weight: bold;
+  color: #6a2aff;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.icons a img {
+  min-width: 36px;
+  min-height: 36px;
+  width: 2.5vw;
+  height: 2.5vw;
+}
 /*# sourceMappingURL=style.css.map */

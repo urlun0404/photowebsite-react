@@ -1,0 +1,13 @@
+.icons {
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  a {
+    img {
+      min-width: 36px;
+      min-height: 36px;
+      width: 2.5vw;
+      height: 2.5vw;
+    }
+  }
+}

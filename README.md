@@ -25,9 +25,12 @@ The following features are what you can do on this website:
 
 ## To Do:
 
+- Improt css as styled component
+- Better way to import svg files from component
 - Button for clearing search bar
+- Update website bookmark icon
+- Add page-loading tip
 - Update website UI
-- Add About page
 
 ## Author
 

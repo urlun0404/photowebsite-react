@@ -3,6 +3,8 @@ $primary: #6300ff;
 $button-color: #baa0e5;
 $button-hover-color: #61468a;
 $border-color: #1f0052;
+$link-color: #4302aa;
+$link-hover-color: rgb(106, 42, 255);
 
 * {
   padding: 0;
@@ -41,3 +43,6 @@ ul {
 @import "./search";
 @import "./footer";
 @import "./picture";
+@import "./header";
+@import "./main";
+@import "./icons";
